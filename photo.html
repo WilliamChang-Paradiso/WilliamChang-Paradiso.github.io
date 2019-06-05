@@ -19,8 +19,13 @@
 
         var id = GetURLParameter('id');
 
-        document.write("<img src=\"https://i.imgur.com/", id, ".jpg\" />");
+        document.write("<p>");
+        document.write("<img src=\"https://i.imgur.com/", id, ".jpg\" class=\"center\"/>");
+        document.write("</p>");
+
+        document.write("<p>");
         document.write("<div class=\"line-it-button\" data-lang=\"zh_Hant\" data-type=\"share-b\" data-ver=\"3\" data-url=\"", window.location.href, "\" data-color=\"default\" data-size=\"large\" data-count=\"false\" style=\"display: none;\"></div>")
+        document.write("</p>");
     </script>
 
 </body>
