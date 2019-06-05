@@ -2,7 +2,26 @@
 <html>
 <body>
 
-    <img src="https://i.imgur.com/lJp6eXd.jpg" />
+    <img id="p0" src="" />
+
+    <script>
+        function GetURLParameter(sParam)
+        {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) 
+            {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) 
+                {
+                    return sParameterName[1];
+                }
+            }
+        }​
+
+        var id = GetURLParameter('id');
+        document.getElementById("p0").src = "https://i.imgur.com/" + id + ".jpg";
+    </script>
 
 </body>
 </html>
