@@ -19,6 +19,10 @@
             return null;
         }
 
+        function CopyUrl() {
+
+        }
+
         var id = GetURLParameter('id');
 
         document.write("<p>");
@@ -29,7 +33,8 @@
         document.write("&emsp;&emsp;&emsp;");
         document.write("<div class=\"fb-share-button\" data-href=\"", window.location.href, "\" data-layout=\"button\" data-size=\"large\"><a target=\"_blank\" href=\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftest%2F&amp;src=sdkpreparse\" class=\"fb-xfbml-parse-ignore\">Share</a></div>");
         document.write("&emsp;&emsp;&emsp;");
-        document.write("<textarea rows=\"1\" cols=\"80\">", window.location.href, "</textarea>");
+        document.write("<textarea rows=\"1\" cols=\"80\" id=\"UrlText\">", window.location.href, "</textarea>");
+        document.write("<input type=\"button\" value=\"Copy Url\" onclick=\"CopyUrl();\" />");
     </script>
 
 </body>
